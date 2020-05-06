@@ -1,30 +1,26 @@
 import * as React from 'react';
 import { Menu } from './Menu';
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import getMuiTheme from 'material-ui/styles/getMuiTheme';
-import blue from '@material-ui/core/colors/blue';
+import { Header } from './Header';
+import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
+import cyan from '@material-ui/core/colors/cyan';
 import yellow from '@material-ui/core/colors/yellow';
-import AppBar from 'material-ui/AppBar';
+import './App.scss';
 
-const muiTheme = getMuiTheme({
+const muiTheme = createMuiTheme({
   palette: {
-    type: 'dark', // ベースのテーマ lightかdarkか
-    primary: blue, // primaryのカラー
+    primary: cyan, // primaryのカラー
     secondary: yellow, // secondaryのカラー
-  },
-  appBar: {
-    height: 50,
   },
 });
 
 function App(): JSX.Element {
   return (
-    <MuiThemeProvider muiTheme={muiTheme}>
-      <div className="App">
-        <AppBar title="My AppBar" />
+    <ThemeProvider theme={muiTheme}>
+      <div className="app-root">
+        <Header />
         <Menu />
       </div>
-    </MuiThemeProvider>
+    </ThemeProvider>
   );
 }
 

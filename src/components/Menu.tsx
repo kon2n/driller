@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { BrowserRouter as Router, Link, Route } from 'react-router-dom';
+import { PlaySansu } from '../containers/play';
 
 //ページの中身用のコンポーネントを作成
 const topPage = () => (
@@ -10,19 +11,19 @@ const topPage = () => (
 
 const page1 = () => (
   <div>
-    <h1>page1</h1>1枚目のページです
+    <PlaySansu />
   </div>
 );
 
 const page2 = () => (
   <div>
-    <h1>page2</h1>2枚目のページです
+    <h1>page2</h1>
   </div>
 );
 
 const page3 = () => (
   <div>
-    <h1>page3</h1>3枚目のページです
+    <h1>page3</h1>
   </div>
 );
 

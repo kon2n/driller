@@ -1,0 +1,24 @@
+.app-root {
+  h1 {
+    color: teal;
+  }
+
+  .prefix_sample {
+    height: 50px;
+    width: 50px;
+    animation: anime1 5s ease -2s infinite alternate;
+  }
+
+  @keyframes anime1 {
+    0% {
+      width: 50px;
+      height: 50px;
+      background-color: aqua;
+    }
+    100% {
+      width: 200px;
+      height: 50px;
+      background-color: blue;
+    }
+  }
+}
