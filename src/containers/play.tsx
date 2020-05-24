@@ -1,5 +1,6 @@
 import React, { useReducer, useEffect } from 'react';
 import { NumberInput } from '../components/common/NumberInput';
+import { QuestionLabel } from '../components/common/typograph';
 import { Result } from '../components/common/Result';
 import { QuestionSelector } from '../components/common/QuestionSelector';
 import { useInputNumberState } from '../hooks/inputNumber';
@@ -46,7 +47,7 @@ function PlaySansu(): JSX.Element {
   const p = { numstr, addNumber, delNumber, confirm };
   return (
     <div>
-      <div>{q.question}</div>
+      <QuestionLabel question={q.question} answar={p.numstr} />
       <NumberInput {...p} />
     </div>
   );
