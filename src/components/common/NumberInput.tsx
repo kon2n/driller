@@ -1,7 +1,6 @@
 import * as React from 'react';
 import './NumberInput.scss';
 import { ColorButton } from './ColorButton';
-import { AnswerField } from './AnswerField';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { ICON } from '../../icon';
 
@@ -14,9 +13,6 @@ interface INumberInput {
 function NumberInput(p: INumberInput): JSX.Element {
   return (
     <>
-      <div>
-        <AnswerField value={p.numstr} />
-      </div>
       <div className="number-input">
         <div className="row">
           <NumKey label="7" handleAdd={p.addNumber} />
