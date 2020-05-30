@@ -35,7 +35,7 @@ const Menu = () => {
 
   return (
     <Router>
-      <div style={{ width: '500px', textAlign: 'left' }}>
+      <div>
         <ul style={{ display: 'flex' }}>
           <li style={liStyle}>
             <Link to="/">top</Link>
@@ -51,7 +51,7 @@ const Menu = () => {
           </li>
         </ul>
 
-        <div style={{ marginLeft: '50px' }}>
+        <div>
           <Route path="/" exact component={topPage} />
           <Route path="/page1" exact component={page1} />
           <Route path="/page2" exact component={page2} />

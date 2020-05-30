@@ -6,6 +6,7 @@ import { QuestionSelector } from '../components/common/QuestionSelector';
 import { useInputNumberState } from '../hooks/inputNumber';
 import { questionStateStore, IquestionStoreState, ActionType, QuestionCode } from '../hooks/questionStore';
 import { createQuestionStoreState } from '../logic/questionCreator';
+import Container from '@material-ui/core/Container';
 
 const DEF = {
   DOC_TITLE: '算数ドリル',
@@ -48,7 +49,9 @@ function PlaySansu(): JSX.Element {
   return (
     <div>
       <QuestionLabel question={q.question} answar={p.numstr} />
-      <NumberInput {...p} />
+      <Container>
+        <NumberInput {...p} />
+      </Container>
     </div>
   );
 }
