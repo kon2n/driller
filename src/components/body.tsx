@@ -9,11 +9,13 @@ const topPage = () => (
   </div>
 );
 
-const page1 = () => (
-  <div>
-    <PlaySansu />
-  </div>
-);
+function Play() {
+  return (
+    <div>
+      <PlaySansu />
+    </div>
+  );
+}
 
 const page2 = () => (
   <div>
@@ -27,7 +29,7 @@ const page3 = () => (
   </div>
 );
 
-const Menu = () => {
+const Body = () => {
   const liStyle = {
     display: 'inline',
     width: '100px',
@@ -41,7 +43,7 @@ const Menu = () => {
             <Link to="/">top</Link>
           </li>
           <li style={liStyle}>
-            <Link to="/page1">page1</Link>
+            <Link to="/play">Play</Link>
           </li>
           <li style={liStyle}>
             <Link to="/page2">page2</Link>
@@ -53,7 +55,7 @@ const Menu = () => {
 
         <div>
           <Route path="/" exact component={topPage} />
-          <Route path="/page1" exact component={page1} />
+          <Route path="/play" exact component={Play} />
           <Route path="/page2" exact component={page2} />
           <Route path="/page3" exact component={page3} />
         </div>
@@ -62,4 +64,4 @@ const Menu = () => {
   );
 };
 
-export { Menu };
+export { Body };
