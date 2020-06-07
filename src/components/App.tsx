@@ -1,6 +1,7 @@
 import * as React from 'react';
-import { Menu } from './Menu';
+import { Body } from './body';
 import { Header } from './Header';
+import { Footer } from './footer';
 import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
 import cyan from '@material-ui/core/colors/cyan';
 import yellow from '@material-ui/core/colors/yellow';
@@ -17,8 +18,15 @@ function App(): JSX.Element {
   return (
     <ThemeProvider theme={muiTheme}>
       <div className="app-root">
-        <Header />
-        <Menu />
+        <div className="app-header">
+          <Header />
+        </div>
+        <div className="app-body">
+          <Body />
+        </div>
+        <div className="app-footer">
+          <Footer />
+        </div>
       </div>
     </ThemeProvider>
   );
