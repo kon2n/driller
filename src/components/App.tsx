@@ -18,9 +18,15 @@ function App(): JSX.Element {
   return (
     <ThemeProvider theme={muiTheme}>
       <div className="app-root">
-        <Header />
-        <Body />
-        <Footer />
+        <div className="app-header">
+          <Header />
+        </div>
+        <div className="app-body">
+          <Body />
+        </div>
+        <div className="app-footer">
+          <Footer />
+        </div>
       </div>
     </ThemeProvider>
   );
