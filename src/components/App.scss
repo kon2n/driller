@@ -1,6 +1,8 @@
 body {
   margin: 0;
   width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
 }
 
 .app-root {
@@ -26,22 +28,4 @@ body {
     width: 100%;
   }
 
-  .prefix_sample {
-    height: 50px;
-    width: 50px;
-    animation: anime1 5s ease -2s infinite alternate;
-  }
-
-  @keyframes anime1 {
-    0% {
-      width: 50px;
-      height: 50px;
-      background-color: aqua;
-    }
-    100% {
-      width: 200px;
-      height: 50px;
-      background-color: blue;
-    }
-  }
 }
