@@ -28,7 +28,7 @@ const useStyles = makeStyles((theme: Theme) =>
 function Header(): JSX.Element {
   const classes = useStyles();
   return (
-    <div>
+    <div className="app-header">
       <AppBar position="static">
         <Toolbar>
           <Typography className={classes.title}>さんすうドリラー</Typography>
